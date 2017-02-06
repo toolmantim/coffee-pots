@@ -1,0 +1,57 @@
+steps:
+
+  - block: ":coffee::information_desk_person: Brew Details"
+      fields:
+        - select: "Roaster"
+          key: "roaster"
+          options:
+            - label: "Sample Coffee"
+              value: "sample-coffee"
+            - label: "Contraband"
+              value: "contraband"
+            - label: "Everyday Coffee"
+              value: "sample-coffee"
+        - text: "Batch"
+          key: "batch"
+          hint: "Where were the beans from?"
+        - text: "Roasting Date"
+          key: "roast-date"
+          hint: "What date were they roasted? (in DD/MM/YY format)"
+        - text: "Grams"
+          key: "grams"
+          hint: "How many grams of beans?"
+        - text: "Grind"
+          key: "grind-setting"
+          hint: "What number setting was the grind?"
+
+  - command: "echo 'Fresh pots!'"
+    name: ":coffee::dash: Fresh Pots!"
+
+  - wait
+
+  - block: ":tongue::writing_hand: Review"
+    fields:
+      - text: "How many pots have you had?"
+        hint: "How many pots of coffee will this be today?"
+        key: "pot-of-the-day"
+      - select: "Rating"
+        key: "rating"
+        hint: "What do you think, out of 5?"
+        options:
+          - label: "1"
+            value: "1"
+          - label: "2"
+            value: "2"
+          - label: "3"
+            value: "3"
+          - label: "4"
+            value: "4"
+          - label: "5"
+            value: "5"
+      - text: "Tasting notes"
+        key: "tasting-notes"
+
+  - wait
+
+  - command: "print-review.sh"
+    name: ":tongue::printer:"
