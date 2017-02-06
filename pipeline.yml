@@ -24,13 +24,6 @@ steps:
         key: "grind-setting"
         hint: "What number setting was the grind?"
 
-  - command: "echo 'Fresh pots!'"
-    name: ":coffee::dash: Fresh Pots!"
-    agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:default}"
-
-  - wait
-
   - block: ":tongue::writing_hand: Review"
     fields:
       - text: "How many pots have you had?"
@@ -57,5 +50,3 @@ steps:
 
   - command: "print-review.sh"
     name: ":tongue::printer:"
-    agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:default}"
