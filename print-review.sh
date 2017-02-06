@@ -3,6 +3,7 @@
 set -eu
 
 echo "+++ :coffee: :writing_hand:"
+echo -en '\033[00;33m'
 cat <<"COFFEECUP"
 
    ( (
@@ -13,6 +14,7 @@ cat <<"COFFEECUP"
    `----'
 
 COFFEECUP
+echo -en '\033[0m'
 
 echo "+++ :coffee: Roaster"
 buildkite-agent meta-data get "roaster"
