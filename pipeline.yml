@@ -27,7 +27,7 @@ steps:
   - command: "echo 'Fresh pots!'"
     name: ":coffee::dash: Fresh Pots!"
     agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:default}"
 
   - wait
 
@@ -58,4 +58,4 @@ steps:
   - command: "print-review.sh"
     name: ":tongue::printer:"
     agents:
-      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:-default}"
+      queue: "${BUILDKITE_AGENT_META_DATA_QUEUE:default}"
