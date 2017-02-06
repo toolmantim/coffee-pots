@@ -3,6 +3,7 @@ steps:
   - block: ":coffee::information_desk_person: Brew Details"
     fields:
       - select: "Roaster"
+        hint: "Who roasted the beans?"
         key: "roaster"
         options:
           - label: "Sample Coffee"
@@ -19,19 +20,26 @@ steps:
         hint: "What date were they roasted? (in DD/MM/YY format)"
       - text: "Grams"
         key: "grams"
-        hint: "How many grams of beans?"
+        hint: "How many grams of beans? (18g per 300mL)"
       - text: "Grind"
         key: "grind-setting"
         hint: "What number setting was the grind?"
 
   - block: ":tongue::writing_hand: Review"
     fields:
-      - text: "How many pots have you had?"
+      - select: "How many pots have you had?"
         hint: "How many pots of coffee will this be today?"
         key: "pot-of-the-day"
+        options:
+          - label: "1"
+            value: "1"
+          - label: "2"
+            value: "2"
+          - label: "3+"
+            value: "3+"
       - select: "Rating"
-        key: "rating"
         hint: "What do you think, out of 5?"
+        key: "rating"
         options:
           - label: "1"
             value: "1"
