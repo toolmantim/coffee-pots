@@ -1,6 +1,6 @@
 steps:
 
-  - block: ":coffee: :information_desk_person: Brew Information"
+  - block: ":coffee: :information_desk_person: Brew Info"
     fields:
       - select: "Roaster"
         hint: "Who roasted the beans?"
