@@ -1,9 +1,8 @@
 #!/bin/bash
 
-set -euo pipefail
+set -eu
 
-echo "+++ :tongue: :printer: Review"
-
+echo "+++ :coffee: :writing_hand:"
 cat <<"COFFEECUP"
 
    ( (
@@ -15,33 +14,26 @@ cat <<"COFFEECUP"
 
 COFFEECUP
 
-echo "Roaster:"
+echo "+++ :coffee: Roaster"
 buildkite-agent meta-data get "roaster"
-echo; echo
 
-echo "Batch:"
+echo "+++ :coffee: Batch"
 buildkite-agent meta-data get "batch"
-echo; echo
 
-echo "Roast Date:"
+echo "+++ :coffee: Roast Date"
 buildkite-agent meta-data get "roast-date"
-echo; echo
 
-echo "Grams:"
+echo "+++ :coffee: Grams"
 buildkite-agent meta-data get "grams"
-echo; echo
 
-echo "Grind Setting:"
+echo "+++ :coffee: Grind Setting"
 buildkite-agent meta-data get "grind-setting"
-echo; echo
 
-echo "Pot Number:"
+echo "+++ :coffee: Pot Number"
 buildkite-agent meta-data get "pot-number"
-echo; echo
 
-echo "Rating:"
+echo "+++ :coffee: Rating"
 buildkite-agent meta-data get "rating"
-echo; echo
 
-echo "Tasting Notes:"
+echo "+++ :coffee: Tasting Notes"
 buildkite-agent meta-data get "tasting-notes"
