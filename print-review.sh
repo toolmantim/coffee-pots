@@ -4,6 +4,17 @@ set -euo pipefail
 
 echo "+++ :tongue: :printer: Review"
 
+cat <<"COFFEECUP"
+
+   ( (
+    ) )
+  ........
+  |      |]  Review
+  \      /
+   `----'
+
+COFFEECUP
+
 echo "Roaster:"
 buildkite-agent meta-data get "roaster"
 echo; echo
