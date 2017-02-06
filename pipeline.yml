@@ -1,6 +1,6 @@
 steps:
 
-  - block: ":coffee::information_desk_person: Brew Details"
+  - block: ":coffee: :information_desk_person: Brew Information"
     fields:
       - select: "Roaster"
         hint: "Who roasted the beans?"
@@ -25,11 +25,11 @@ steps:
         key: "grind-setting"
         hint: "What number setting was the grind?"
 
-  - block: ":tongue::writing_hand: Review"
+  - block: ":tongue: :writing_hand: Notes"
     fields:
       - select: "How many pots have you had?"
         hint: "How many pots of coffee will this be today?"
-        key: "pot-of-the-day"
+        key: "pot-number"
         options:
           - label: "1"
             value: "1"
@@ -57,4 +57,4 @@ steps:
   - wait
 
   - command: "print-review.sh"
-    name: ":tongue::printer:"
+    name: ":writing_hand: :printer: Results"
