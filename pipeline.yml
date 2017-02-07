@@ -11,7 +11,7 @@ steps:
           - label: "Contraband"
             value: "contraband"
           - label: "Everyday Coffee"
-            value: "sample-coffee"
+            value: "everyday-coffee"
       - text: "Batch"
         key: "batch"
         hint: "Where were the beans from?"
